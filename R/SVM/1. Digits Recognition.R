@@ -112,15 +112,6 @@ ctrl_Radial <- trainControl(method = "cv",
                             classProbs = TRUE
                             )
 
-
-
-
-
-
-
-
-
-
 # Find a good Sigma (turned out to be sigma = 2.935701ee-07)
 model <- train(xVal, yValLabels, 
                method='svmRadial',
@@ -136,7 +127,6 @@ model <- train(xVal, yValLabels,
                trControl = ctrl_Radial,
                tuneGrid = expand.grid(.sigma=c(2.88e-07),.C=c(1,2,4,8,16,32))
               )
-
 
 
 ###################
